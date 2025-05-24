@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Melanie's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins :wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #f9f0ff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 250px;
+      background: linear-gradient(135deg, #7e57c2, #d8b4fe);
+      padding: 2rem;
+      transition: width 0.3s ease;
+      color: #fff;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+    .nav-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin-bottom: 1rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #6a408a;
+    }
+
+    /* Main Content */
+    .content {
+      margin-left: 250px;
+      padding: 2rem;
+      min-height: 100vh;
+      transition: margin-left 0.3s ease;
+    }
+
+    .about,
+    .education,
+    .experiences,
+    .contact {
+      margin-bottom: 3rem;
+    }
+
+    .about h2,
+    .education h2,
+    .experiences h2,
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about p,
+    .education p,
+    .experiences p,
+    .contact p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #616161;
+    }
+
+    .education-card {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .education-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .education-card h4 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .education-card .date {
+      color: #7e57c2;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-card {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .experience-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .date {
+      color: #7e57c2;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 0.75rem;
+      background: rgba(255, 255, 255, 0.8);
+      border: none;
+      border-radius: 8px;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      padding: 0.75rem;
+      background-color: #7e57c2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact button:hover {
+      background-color: #6a408a;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #7e57c2;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #6a408a;
+    }
+
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 0;
+        padding: 1rem;
+      }
+
+      .content {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="images/pfp.JPG" alt="Profile Picture" class="profile-pic" />
+      <h1>Melanie</h1>
+      <p>An IT enthusiast.</p>
+      <a href="resume.html" class="btn">Resume</a>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>
+       Hi there! I'm Melanie, a student pursuing Diploma in Information Communication Technology.  <br>
+       I am gaining interest with coding and have been practising lately about building simple websites.<br>
+       Self-motivated and detail-oriented ICT professional with hands-on experience in troubleshooting, network setup, and client support.<br>
+       Proven ability to work independently, managing complex technical tasks efficiently in high-pressure environments.<br>
+       Strong communicator with a passion for solving technical challenges and delivering reliable IT solutions.<br>
+      </p>
+
+      <section class="languages">
+        <h2>🌍 Languages</h2>
+        <ul>
+          <li>English – Fluent</li>
+          <li>Kiswahili – Native</li>
+        </ul>
+      </section>
+    </section>
+
+
+     <section id="education" class="education">
+      <h2>Education</h2>
+      <div class="education-card">
+        <h3> Kasarani Technical and Vovational College </h3> 
+        <h4>Diploma in Information Communication Technology</h4>
+        <span class="date">Aug 2022 - To Date</span>
+      </div>
+     <div class="education-card">
+        <h3>Mbooni AIC girls</h3>
+        <h4>Kenya Certificate of Secondary School Education (KCSE)</h4>
+        <span class="date">2018 - 2022 March</span>
+      </div>
+      <div class="education-card">
+        <h3>Champions Haven of Mercy Academy</h3>
+         <h4>Kenya Certificate of Primary School Education (KCPE)</h4>
+        <span class="date">2010 - 2017</span>
+      </div>
+    </section>
+
+
+    <section id="experiences" class="experiences">
+      <h2>Experiences</h2>
+      <div class="experience-card">
+        <h3>ICT Trainee (Attachment), Muthu Silver Springs Hotel</h3>
+        <span class="date">Aug 2024 - Nov 2024</span>
+      </div>
+      <div class="experience-card">
+        <h3>Cyber Cafe Attendant, Spark Cyber.</h3>
+        <span class="date">Sep 2023 - Jan 2024</span>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/xqaqvzkw " method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+  </main>
+
+
+  <script>
+    // Toggle sidebar visibility on smaller screens
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.querySelector('.sidebar');
+  const content = document.querySelector('.content');
+
+  // Add a toggle button if needed
+  const toggleButton = document.createElement('button');
+  toggleButton.textContent = '☰';
+  toggleButton.style.position = 'fixed';
+  toggleButton.style.top = '1rem';
+  toggleButton.style.right = '1rem';
+  toggleButton.style.zIndex = '1000';
+  toggleButton.style.padding = '0.5rem';
+  toggleButton.style.border = 'none';
+  toggleButton.style.backgroundColor = '#7e57c2';
+  toggleButton.style.color = '#fff';
+  toggleButton.style.borderRadius = '50%';
+  toggleButton.style.cursor = 'pointer';
+
+  document.body.appendChild(toggleButton);
+
+  toggleButton.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    content.classList.toggle('open');
+  });
+});
+  </script>
+</body>
+</html>
