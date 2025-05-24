@@ -32,6 +32,12 @@
       padding: 2rem;
       transition: width 0.3s ease;
       color: #fff;
+      z-index: 1000;
+    }
+
+    .sidebar.open {
+      width: 0;
+      padding: 1rem;
     }
 
     .profile {
@@ -73,6 +79,10 @@
       padding: 2rem;
       min-height: 100vh;
       transition: margin-left 0.3s ease;
+    }
+
+    .content.open {
+      margin-left: 0;
     }
 
     .about,
@@ -194,6 +204,20 @@
       background-color: #6a408a;
     }
 
+    /* Toggle Button */
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #7e57c2;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
 
     /* Media Queries */
     @media (max-width: 768px) {
@@ -205,10 +229,17 @@
       .content {
         margin-left: 0;
       }
+
+      .toggle-btn {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- Toggle Button -->
+  <button class="toggle-btn">☰</button>
 
   <!-- Sidebar -->
   <aside class="sidebar">
@@ -249,26 +280,24 @@
       </section>
     </section>
 
-
      <section id="education" class="education">
       <h2>Education</h2>
       <div class="education-card">
-        <h3> Kasarani Technical and Vovational College </h3> 
+        <h3>Kasarani Technical and Vocational College</h3>
         <h4>Diploma in Information Communication Technology</h4>
         <span class="date">Aug 2022 - To Date</span>
       </div>
-     <div class="education-card">
-        <h3>Mbooni AIC girls</h3>
+      <div class="education-card">
+        <h3>Mbooni AIC Girls</h3>
         <h4>Kenya Certificate of Secondary School Education (KCSE)</h4>
         <span class="date">2018 - 2022 March</span>
       </div>
       <div class="education-card">
         <h3>Champions Haven of Mercy Academy</h3>
-         <h4>Kenya Certificate of Primary School Education (KCPE)</h4>
+        <h4>Kenya Certificate of Primary School Education (KCPE)</h4>
         <span class="date">2010 - 2017</span>
       </div>
     </section>
-
 
     <section id="experiences" class="experiences">
       <h2>Experiences</h2>
@@ -293,34 +322,18 @@
     </section>
   </main>
 
-
   <script>
     // Toggle sidebar visibility on smaller screens
-document.addEventListener('DOMContentLoaded', () => {
-  const sidebar = document.querySelector('.sidebar');
-  const content = document.querySelector('.content');
+    document.addEventListener('DOMContentLoaded', () => {
+      const sidebar = document.querySelector('.sidebar');
+      const content = document.querySelector('.content');
+      const toggleBtn = document.querySelector('.toggle-btn');
 
-  // Add a toggle button if needed
-  const toggleButton = document.createElement('button');
-  toggleButton.textContent = '☰';
-  toggleButton.style.position = 'fixed';
-  toggleButton.style.top = '1rem';
-  toggleButton.style.right = '1rem';
-  toggleButton.style.zIndex = '1000';
-  toggleButton.style.padding = '0.5rem';
-  toggleButton.style.border = 'none';
-  toggleButton.style.backgroundColor = '#7e57c2';
-  toggleButton.style.color = '#fff';
-  toggleButton.style.borderRadius = '50%';
-  toggleButton.style.cursor = 'pointer';
-
-  document.body.appendChild(toggleButton);
-
-  toggleButton.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-    content.classList.toggle('open');
-  });
-});
+      toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+        content.classList.toggle('open');
+      });
+    });
   </script>
 </body>
 </html>
