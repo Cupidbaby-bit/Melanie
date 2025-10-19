@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 25px 10px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.project {
+  background-color: #fff;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.project h2 {
+  margin-bottom: 10px;
+  color: #0077cc;
+}
+
+.project p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.project img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 5px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #0077cc;
+  color: white;
+  margin-top: 20px;
+  font-size: 14px;
+}
+</head>
+<body>
+  <header>
+    <h1>Your Name</h1>
+    <p>ICT Intern | Web & IT Enthusiast</p>
+  </header>
+
+  <section class="projects">
+
+    <!-- WiFi Wall Ports -->
+    <div class="project">
+      <h2>WiFi Wall Ports Installation</h2>
+      <p>Learning to set up wall ports for WiFi in different rooms. Gained hands-on experience with cabling and networking.</p>
+      <img src="images/wifi1.jpg" alt="WiFi Port 1">
+      <img src="images/wifi2.jpg" alt="WiFi Port 2">
+      <img src="images/wifi3.jpg" alt="WiFi Port 3">
+    </div>
+
+    <!-- Hard Drive Installation -->
+    <div class="project">
+      <h2>Hard Drive Installation</h2>
+      <p>Trained on how to safely replace and upgrade computer hard drives.</p>
+      <img src="images/harddrive.jpg" alt="Hard Drive Installation">
+    </div>
+
+    <!-- Data Entry -->
+    <div class="project">
+      <h2>Data Entry</h2>
+      <p>Performed data entry tasks, ensuring accurate input and organization of records.</p>
+      <img src="images/dataentry.jpg" alt="Data Entry">
+    </div>
+
+    <!-- Server Room / Database Extraction -->
+    <div class="project">
+      <h2>Server Room / Database Extraction</h2>
+      <p>Worked in the server room, connecting devices to extract and manage databases.</p>
+      <img src="images/serverroom.jpg" alt="Server Room Work">
+    </div>
+
+  </section>
+
+  <footer>
+    <p>Contact: your.email@example.com</p>
+  </footer>
+</body>
+</html>
