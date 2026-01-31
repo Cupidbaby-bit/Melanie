@@ -139,6 +139,19 @@
       margin-bottom: 0.5rem;
     }
 
+    .project-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+    .project-images img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
     .contact form {
       display: flex;
       flex-direction: column;
@@ -344,31 +357,39 @@
   <h2>Projects</h2>
 
   <div class="project-card">
+  <div class="project-images">
+    <img src="images/IMG_20241112_131339_HDR.jpg" alt="Ethernet cable connection">
+    <img src="images/network2.jpg" alt="Network setup">
+    <img src="images/network3.jpg" alt="Network setup">
+  </div>
+  <h3>Hotel Wi-Fi Network Setup</h3>
+  <p>Configured routers and Wi-Fi extenders for full coverage at Muthu Silver Springs Hotel.</p>
+</div>
+
+  <div class="project-card">
+    <div class="project-images">
     <img src="images/IMG_20241112_131339_HDR.jpg" alt="Ethernet cable connection">
     <img src="images/network2.jpg" alt="Network setup">
     <img src="images/network2.jpg" alt="Network setup">
+</div>
     <h3>Hotel Wi-Fi Network Setup</h3>
     <p>Configured routers and Wi-Fi extenders for full coverage at Muthu Silver Springs Hotel.</p>
   </div>
 
   <div class="project-card">
+    <div class="project-images">
     <img src="images/IMG_20241104_165111_HDR.jpg" alt="Conference AV">
     <img src="images/IMG_20241023_173616.jpg" alt="Conference AV">
+</div>
     <h3>Conference AV Setup</h3>
     <p>Assisted in setting up projectors, microphones, and cameras for hotel events.</p>
   </div>
 </section>
 
   <div class="project-card">
-    <img src="images/IMG_20241104_165111_HDR.jpg" alt="Conference AV">
-    <img src="images/IMG_20241023_173616.jpg" alt="Conference AV">
-    <h3>Conference AV Setup</h3>
-    <p>Assisted in setting up projectors, microphones, and cameras for hotel events.</p>
-  </div>
-     </section>
-
-  <div class="project-card">
+    <div class="project-images">
     <img src="images/menu.png" alt="Food menu screenshot">
+    </div>
     <h3>Restaurant Menu Website</h3>
     <p>A responsive restaurant menu built while practising HTML & CSS basics.</p>
     <a href="https://cupidbaby-bit.github.io/velvetbite/" target="_blank" class="btn">View Project</a>
